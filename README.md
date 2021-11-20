@@ -1,2 +1,1 @@
-# 00_Domaci_Zadaci
-00_Domaci_Zadaci
+Nikola Glavonjic 3223
