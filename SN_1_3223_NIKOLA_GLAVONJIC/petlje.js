@@ -135,12 +135,12 @@ n = 15;
 suma = 0;
 
 for (i = n; i > 0; i--) {
-  if (i % 3 == 0 && i % 2 == 1) {
+  if (i % 3 == 0 && i % 2 == 1 && n % i == 0) {
     suma++;
   }
 }
 
-console.log(`${n} ima ${suma} neparnih broj/a/eva koji su deljivi brojem 3.`);
+console.log(`${n} ima ${suma} neparnih delioca koji su deljivi brojem 3.`);
 
 // //17. ZADATAK
 
