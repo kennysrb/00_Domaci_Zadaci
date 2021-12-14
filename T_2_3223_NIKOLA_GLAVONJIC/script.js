@@ -10,7 +10,6 @@ let sat = date.getHours();
 let minut = date.getMinutes();
 
 let vreme = sat * 60 + minut;
-
 let ostatak = kraj - vreme;
 let sati = Math.floor(ostatak / 60);
 let minuti = ostatak % 60;
@@ -49,8 +48,8 @@ if (posiljka >= 1000 && posiljka <= 2000) {
 
 // ZADATAK 3
 
-let broj = 125;
-let kupci = 25;
+let broj = 1999;
+let kupci = 40;
 let nabavka = 0;
 let i = broj;
 
@@ -59,7 +58,9 @@ while (i % kupci != 0) {
   i++;
 }
 
-console.log(`Potrebno je kupiti najmanje ${nabavka} ruza`);
+console.log(
+  `Prvobitan broj ruza je ${broj} Potrebno je kupiti najmanje ${nabavka} ruza`
+);
 
 // ZADATAK 4
 
@@ -99,5 +100,4 @@ for (i = n; i <= m; i++) {
 
 console.log(zbir);
 console.log(brojevi);
-
 console.log(zbir - brojevi);
