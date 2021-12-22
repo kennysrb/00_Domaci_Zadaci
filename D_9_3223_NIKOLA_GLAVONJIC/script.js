@@ -31,11 +31,11 @@ let zadatak123 = (niz, type) => {
   // 2. ZADATAK ELSE IF PETLJA ZA TABELU
   else if (type === "table") {
     let type = `<table style = "margin-top: 30px; width: 30%; margin: auto; background-color:  rgb(58, 29, 29); color: white; align-items: center;";><tr><th style="font-size: 2em;
-        padding: 10px;">Liga bez briga</th></tr>`;
+    padding: 10px;">Liga bez briga</th></tr>`;
     niz.forEach((el) => {
       type += `<tr style=" background-color:#666;"><td style="text-align: center;
-            padding: 20px;
-            font-weight: bold;
+      padding: 20px;
+      font-weight: bold;
             font-size: 1.2em;">${el}</td></tr>`;
     });
     type += `</table>`;
@@ -44,18 +44,22 @@ let zadatak123 = (niz, type) => {
 
   // 3. ZADATAK ELSE IF PETLJA ZA SLIKE
   else if (type === "img") {
+    let ispis = "";
     niz.forEach((el) => {
-      document.getElementById(
-        "slike"
-      ).innerHTML += `<${type} width="200px" src="${el}"></${type}>`;
+      ispis += `<${type} width="200px" src="${el}"></${type}>`;
     });
-    return type;
+    return ispis;
   } else {
-    alert("POGRESAN UNOS");
+    // nije potrebno za domaci ali eto :)
+    let ispis = " ";
+    alert(
+      `Molim vas unesite parametre "ul" , "table" ili "img" za ispis domaceg zadatka. :)`
+    );
+    return ispis;
   }
 };
 
 pisi(zadatak123(shoppingList, "ul"));
 pisi(zadatak123(ekipe, "table"));
 pisi(zadatak123(adreseSlike, "img"));
-// pisi(zadatak123(adreseSlike, ""));    // pogresan unos test
+// pisi(zadatak123(adreseSlike, "")); // pogresan unos test
