@@ -53,12 +53,13 @@ function addMovie(obj, id) {
 addMovie(mov1, "movie-2");
 addMovie(mov2, "movie-3");
 addMovie(mov3, "movie-4");
+
 // Menja podatke o nekim filmovima u bazi,
 
 function updateMovie(upd, id) {
   db.collection("movies")
     .doc(id)
-    .update({ upd })
+    .update({ ...upd })
     .then(() => {
       console.log("Uspesno izmenjeni podaci u filmu.");
     })
@@ -67,7 +68,7 @@ function updateMovie(upd, id) {
     });
 }
 
-updateMovie("rating: 9.0", "movie-4");
+updateMovie({ rating: 10.0, name: "Ivan" }, "movie-4");
 
 // Dodaje žanr nekom filmu,
 
